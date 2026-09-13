@@ -1,1 +1,11 @@
+#Right handed triangle indication
+def right_triangle(a,b,c):
+    sides = sorted([a, b, c])
+    if sides[2] ** 2 == sides[0] ** 2 + sides[1] ** 2:
+        print("the triangle is right handed")
+    else:
+        print("the triangle is not right handed")
+    return
 
+a,b,c = map(float,input("enter three numbers").split())
+right_triangle(a,b,c)
