@@ -1,1 +1,23 @@
+#PAN number validation
+def is_valid_pan(pan):
+    if len(pan) != 10:
+        return False
 
+    for i in range(0, 5):
+        if not ('A' <= pan[i] <= 'Z'):
+            return False
+        
+    for i in range(5, 9):
+        if not ('0' <= pan[i] <= '9'):
+            return False
+
+    if not ('A' <= pan[9] <= 'Z'):
+        return False
+
+    return True
+
+pan = input("Enter PAN number: ")
+if is_valid_pan(pan):
+    print("Valid PAN Number")
+else:
+    print("Invalid PAN Number")
