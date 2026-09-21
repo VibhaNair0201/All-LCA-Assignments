@@ -1,1 +1,30 @@
+#Performing operations on dictionary
+tpl=((101,'shyam','bba finance',400),
+     (102,'gita','bsc psychology',300),
+     (103,'drake','btech cse',550))
 
+lst=[[101,'shyam','bba finance',400],
+     [102,'gita','bsc psychology',300],
+     [103,'drake','btech cse',550]]
+
+dic={101: {"name": "shyam", "branch": "bba finance", "marks": 400},
+    102: {"name": "gita", "branch": "bsc psychology", "marks": 300},
+    103: {"name": "drake", "branch": "btech cse", "marks": 550}}
+
+print("Original Records:")
+print(dic)
+
+# 1. Add a new student record
+dic[104] = {"name": "priya", "branch": "btech ece", "marks": 480}
+print(dic)
+# 2. Delete an existing student record
+del dic[102]
+print(dic)
+# 3. Update the details of a student
+dic[101]["marks"] = 420
+print(dic)
+# 4. Display the final student records
+print("Final Records:")
+print(tpl)
+print(lst)
+print(dic)
